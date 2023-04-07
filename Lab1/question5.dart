@@ -1,10 +1,7 @@
 // 5. Write a dart program to calculate the sum of natural numbers.
 
-import 'dart:io';
-
 void main(List<String> args) {
-  print("Enter a number to calculate sum : ");
-  int? num = int.parse(stdin.readLineSync()!);
+  int? num = 5;
 
   calculateSum(num);
 }

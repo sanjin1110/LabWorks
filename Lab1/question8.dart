@@ -4,10 +4,8 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  print("Enter 1st number : ");
-  double num1 = double.parse(stdin.readLineSync()!);
-  print("Enter 2nd number : ");
-  double num2 = double.parse(stdin.readLineSync()!);
+  double num1 = 200;
+  double num2 = 5;
 
   addition(num1, num2);
   subtraction(num1, num2);

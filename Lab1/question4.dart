@@ -1,9 +1,7 @@
 // 4. Write a dart program to print your name 100 times.
 
-import 'dart:io';
 void main(List<String> args) {
-  print("Enter your name : ");
-  String? name = stdin.readLineSync()!;
+  String name = 'Sanjin';
   printName(name);
 }
 

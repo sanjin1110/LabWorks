@@ -1,10 +1,7 @@
 // 6. Write a dart program to generate multiplication tables of 5.
 
-import 'dart:io';
-
 void main(List<String> args) {
-  print("Enter a number to generate its multiplication table :");
-  int? num = int.parse(stdin.readLineSync()!);
+  int? num = 8;
   generateTable(num);
 }
 

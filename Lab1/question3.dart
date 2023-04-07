@@ -1,11 +1,6 @@
 // 3. Write a dart program to check whether a number is positive, negative, or zero.
-
-import 'dart:io';
-
 void main(List<String> args) {
-  print("Enter a number :");
-  double? number = double.parse(stdin.readLineSync()!);
-
+  double? number = 55;
   checkNum(number);
 }
 
