@@ -12,20 +12,37 @@ void main() {
 
     String choice = stdin.readLineSync()!;
     if (choice == '1') {
-      print('Enter the task:');
-      String task = stdin.readLineSync()!;
-      tasks.add(task);
+      tasks = add(tasks);
     } else if (choice == '2') {
-      print('Enter the index of the task to remove:');
-      int index = int.parse(stdin.readLineSync()!);
-      tasks.removeAt(index - 1);
+      tasks = remove(tasks);
     } else if (choice == '3') {
-      print('Tasks:');
-      for (int i = 0; i < tasks.length; i++) {
-        print('${i + 1}. ${tasks[i]}');
-      }
+      view(tasks);
     } else if (choice == '4') {
-      break;
+      exit(0);
     }
+  }
+}
+
+List<String> add(List<String> lst) {
+  stdout.write("Enter activity: ");
+  String? activity = stdin.readLineSync()!;
+  lst.add(activity);
+
+  return lst;
+}
+
+List<String> remove(List<String> lst) {
+  stdout.write("Enter number to delete task : ");
+  int? index = int.parse(stdin.readLineSync()!);
+  lst.removeAt(index - 1);
+
+  return lst;
+}
+
+void view(List<String> lst) {
+  print(" ");
+
+  for (var i = 0; i < lst.length; i++) {
+    print("${i + 1}) ${lst[i]}");
   }
 }
